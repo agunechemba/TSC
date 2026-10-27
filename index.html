@@ -1,0 +1,1297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Story of Code — A Young Programmer's Journey</title>
+<link rel="icon" type="image/svg+xml" href="https://pph.name.ng/pphlogo.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reading progress bar -->
+<div class="reading-progress"><div class="reading-progress-fill"></div></div>
+<div class="page-indicator">Page 1</div>
+<div class="page-hint">← → arrow keys to turn pages</div>
+
+<!-- ============================================================
+     FRONT COVER
+     ============================================================ -->
+<section class="book-page cover-page active" id="cover">
+  <div class="cover-content">
+    <p class="cover-series">A Young Programmer's Journey</p>
+    <h1>The Story of Code</h1>
+    <p class="cover-subtitle">An illustrated adventure through the language of computers</p>
+    <p class="cover-author">Refactored for ages 5–13</p>
+    <div class="cover-note">
+      Three parts. Three ages. One language.<br>
+      Begin as an Adventurer. Grow into an Explorer. Rise as a Master.
+    </div>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin the Journey →</button>
+    </div>
+    <div class="cover-credit">
+      Created by <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABLE OF CONTENTS
+     ============================================================ -->
+<section class="book-page toc-page" id="toc">
+  <div class="chapter-header">
+    <p class="chapter-part">Contents</p>
+    <h2>What Lies Ahead</h2>
+    <p class="chapter-tagline">Every great journey starts with a map.</p>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part One · Adventurers</h3>
+    <ol>
+      <li><a href="#ch-hello">Hello, Computer!</a></li>
+      <li><a href="#ch-words">Words, Numbers, and Truth</a></li>
+      <li><a href="#ch-names">Name Tags for Things</a></li>
+      <li><a href="#ch-choices">Making Choices</a></li>
+      <li><a href="#ch-loops">Round and Round We Go</a></li>
+      <li><a href="#ch-machines">Magic Machines Called Functions</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Two · Explorers</h3>
+    <ol start="7">
+      <li><a href="#ch-lists">Lists of Things</a></li>
+      <li><a href="#ch-chests">Treasure Chests Called Objects</a></li>
+      <li><a href="#ch-super">Super Functions</a></li>
+      <li><a href="#ch-oops">Oops! Bugs and Errors</a></li>
+      <li><a href="#ch-web">The Web Playground</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>Part Three · Masters</h3>
+    <ol start="12">
+      <li><a href="#ch-classes">Building New Things</a></li>
+      <li><a href="#ch-waiting">Waiting Games</a></li>
+      <li><a href="#ch-patterns">Secret Codes and Patterns</a></li>
+      <li><a href="#ch-drawing">Drawing with Code</a></li>
+      <li><a href="#ch-internet">The Internet Adventure</a></li>
+    </ol>
+  </div>
+
+  <div class="toc-part">
+    <h3>After the Journey</h3>
+    <ol start="17">
+      <li><a href="#glossary">The Little Dictionary</a></li>
+      <li><a href="#back">A Note for the Grown-Ups</a></li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Back to Cover</button>
+    <button class="nav-button" data-nav="next">Begin Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRODUCTION
+     ============================================================ -->
+<section class="book-page chapter-page" id="intro">
+  <div class="chapter-header">
+    <p class="chapter-part">Welcome</p>
+    <h2>Hello, Future Programmer</h2>
+    <p class="chapter-tagline">Every wizard starts as an apprentice.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Somewhere near you is a machine that can count faster than you can blink, remember more words than you will ever read, and follow instructions with perfect patience. That machine is a <em>computer</em>. But it is also a very silly machine. It can do almost nothing on its own. It needs you to tell it exactly what to do — one tiny step at a time.</p>
+
+    <p>Those tiny steps are called <strong>code</strong>. And the person who writes them is called a <strong>programmer</strong>. That, very soon, will be you.</p>
+
+    <p>This book is a journey in three parts:</p>
+
+    <ul>
+      <li><strong>Part One — Adventurers.</strong> You will meet the computer, learn its tiny vocabulary, and make it do your bidding. Perfect for ages five to eight.</li>
+      <li><strong>Part Two — Explorers.</strong> You will discover lists, treasure chests, and the grand playground of the web. Great for ages nine to eleven.</li>
+      <li><strong>Part Three — Masters.</strong> You will build your own tools, tame time, and speak to the internet. For ages twelve and thirteen.</li>
+    </ul>
+
+    <p>You do not need a fancy setup to follow along. Any tool that runs JavaScript — a browser, a code editor, a friendly app — will do. The examples in this book are little seeds. Plant them, water them, break them, fix them, and grow them into something of your own.</p>
+
+    <p>Ready? Let us begin.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Before You Go</h3>
+    <ul>
+      <li>A <strong>program</strong> is a set of instructions for a computer.</li>
+      <li>A <strong>programming language</strong> is the way we write those instructions.</li>
+      <li>JavaScript is one such language — and it lives in every web browser.</li>
+      <li>You do not have to be a genius. You have to be patient and curious.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Warm-Up Questions</h3>
+    <ol>
+      <li>What is one thing you wish a computer could do for you?</li>
+      <li>Can you think of three machines in your home that have a tiny computer inside?</li>
+      <li>What does the word "instruction" mean to you?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Contents</button>
+    <button class="nav-button" data-nav="next">Enter Part One →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART ONE DIVIDER — ADVENTURERS
+     ============================================================ -->
+<section class="book-page cover-page part-page" id="part-one">
+  <div class="cover-content">
+    <p class="part-number">Part One</p>
+    <h1>Adventurers</h1>
+    <p class="part-desc">The very first steps. The computer is a small, friendly creature. Here is how to say hello.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Start Chapter One →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 1 — HELLO, COMPUTER!
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-hello">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter One</p>
+    <h2>Hello, Computer!</h2>
+    <p class="chapter-tagline">The very first words you will teach your new machine friend.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Imagine you have a tiny robot named Pip. Pip is very fast and very strong, but Pip is also very literal. If you say, "Make me a sandwich," Pip might stare at you blankly. If you say, "Take one slice of bread, place one slice of cheese on top, then place another slice of bread on top," Pip will happily obey — in less than a second.</p>
+
+    <p>A computer is like Pip. It is not clever. It is not creative. It only follows instructions. The instructions have to be broken into very, very small steps.</p>
+
+    <p>A <strong>program</strong> is a list of those small steps. The act of writing them is called <strong>programming</strong>. When you write a program, you are the boss. The computer is the loyal assistant.</p>
+
+    <p>Here is the simplest program in the world. It tells the computer to show a message:</p>
+
+    <pre class="code-example"><code>console.log("Hello, world!");
+// → Hello, world!</code></pre>
+
+    <p>Read it out loud like a sentence. "Console dot log: Hello, world!" The part in quotes is the message. The <code>console.log</code> is the instruction that says "show this on the screen." The <code>//</code> and the arrow show what happens when the program runs. Go ahead. Type it into any JavaScript console. The machine will say hello back.</p>
+
+    <p>You have just had your first conversation with a computer. It is that simple — and it is that powerful.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A <strong>program</strong> is a list of precise instructions.</li>
+      <li>Computers follow instructions exactly — no more, no less.</li>
+      <li><code>console.log</code> is how you ask the computer to show a message.</li>
+      <li>The quotes around a message are not part of the message; they mark where it starts and ends.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a program that prints your name.</li>
+      <li>Write a program that prints two different messages on two different lines.</li>
+      <li>What do you think happens if you forget one of the quotation marks? Try it and see.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part One</button>
+    <button class="nav-button" data-nav="next">Chapter Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 2 — WORDS, NUMBERS, AND TRUTH
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-words">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Two</p>
+    <h2>Words, Numbers, and Truth</h2>
+    <p class="chapter-tagline">The three basic ingredients of every computer recipe.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Inside a computer, everything is made of tiny pieces called <strong>values</strong>. Think of them as the different kinds of LEGO bricks a programmer can snap together. There are many kinds, but three are especially important for beginners: <em>numbers</em>, <em>strings</em>, and <em>booleans</em>.</p>
+
+    <p><strong>Numbers</strong> are exactly what you think they are: 1, 2, 3, 42, 100, even 9.81. You can add them, subtract them, multiply them, and divide them. The symbols <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code> work just like in math class.</p>
+
+    <pre class="code-example"><code>console.log(2 + 3);   // → 5
+console.log(10 - 4);  // → 6
+console.log(6 * 7);   // → 42
+console.log(20 / 4);  // → 5</code></pre>
+
+    <p><strong>Strings</strong> are pieces of text — words, sentences, names, anything in quotes. The quotes can be single (<code>'...'</code>), double (<code>"..."</code>), or backticks (<code>`...`</code>). It does not matter which, as long as you use the same kind at both ends. You can glue two strings together with the <code>+</code> sign, like this:</p>
+
+    <pre class="code-example"><code>console.log("Hello, " + "world!");
+// → Hello, world!</code></pre>
+
+    <p><strong>Booleans</strong> are the simplest of all. They have only two possible values: <code>true</code> and <code>false</code>. They are how computers think about yes and no. Booleans are what you get when you compare two values:</p>
+
+    <pre class="code-example"><code>console.log(3 &gt; 2);   // → true
+console.log(3 &lt; 2);   // → false
+console.log(3 === 3); // → true</code></pre>
+
+    <p>That's it. Numbers, strings, booleans. With just these three, you can already make the computer do useful arithmetic, display messages, and make simple decisions.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>Numbers</strong> are for counting and math.</li>
+      <li><strong>Strings</strong> are for text, and must be wrapped in quotes.</li>
+      <li><strong>Booleans</strong> are <code>true</code> or <code>false</code>, and come from comparing things.</li>
+      <li>The <code>+</code> sign can add numbers <em>or</em> glue strings together, depending on what it is given.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Use <code>console.log</code> to print the result of <code>12 * 12</code>.</li>
+      <li>Print the string <code>"I am learning JavaScript"</code>.</li>
+      <li>Is the value <code>"5" + 1</code> the same as <code>5 + 1</code>? Try both and see.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter One</button>
+    <button class="nav-button" data-nav="next">Chapter Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 3 — NAME TAGS FOR THINGS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-names">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Three</p>
+    <h2>Name Tags for Things</h2>
+    <p class="chapter-tagline">How programmers remember things without a notebook.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Imagine you are baking cookies. You have a bowl of sugar, a bowl of flour, and a bowl of chocolate chips. Every time you need sugar, you look for the bowl labeled "sugar." That label saves you from dipping your spoon into the wrong bowl.</p>
+
+    <p>Programmers need labels too. A label for a value is called a <strong>binding</strong>, or sometimes a <strong>variable</strong>. You create one with the word <code>let</code>, give it a name, and put a value inside it:</p>
+
+    <pre class="code-example"><code>let myAge = 10;
+console.log(myAge); // → 10</code></pre>
+
+    <p>Now, any time you use the word <code>myAge</code>, the computer knows you mean the number 10. You can even change what the label points to:</p>
+
+    <pre class="code-example"><code>let myAge = 10;
+myAge = 11;
+console.log(myAge); // → 11</code></pre>
+
+    <p>But what if you want a label that can never change? Then use <code>const</code> instead of <code>let</code>. A <strong>constant</strong> is like a name carved into stone:</p>
+
+    <pre class="code-example"><code>const birthday = "May 3rd";
+// birthday = "June 1st"; // this would be an error!</code></pre>
+
+    <p>Good names matter. A name like <code>x</code> tells you nothing. A name like <code>myAge</code> or <code>cookieCount</code> tells you exactly what is inside. Choose names that read like tiny sentences.</p>
+
+    <p>Imagine your labels as little name tags stuck onto values. The values themselves can live anywhere; the tag is how you find them again.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>let</code> creates a label whose value can change later.</li>
+      <li><code>const</code> creates a label whose value cannot be changed.</li>
+      <li>Use clear, descriptive names — your future self will thank you.</li>
+      <li>Names cannot have spaces or start with a number.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a binding called <code>myName</code> and set it to your name. Print it.</li>
+      <li>Create a constant called <code>favoriteColor</code> and set it to your favorite color.</li>
+      <li>What happens if you try to change a <code>const</code> after it is set?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Two</button>
+    <button class="nav-button" data-nav="next">Chapter Four →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 4 — MAKING CHOICES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-choices">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Four</p>
+    <h2>Making Choices</h2>
+    <p class="chapter-tagline">How computers decide what to do next.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every morning you make a choice. You look outside. If it is raining, you take an umbrella. If it is sunny, you take sunglasses. You do not need a long speech — just a quick glance and a decision.</p>
+
+    <p>Computers make choices the same way, using a word called <code>if</code>. The word is followed by a question and, depending on the answer, a set of instructions to follow or skip.</p>
+
+    <pre class="code-example"><code>let isRaining = true;
+
+if (isRaining) {
+  console.log("Take an umbrella!");
+}</code></pre>
+
+    <p>If the question is <code>true</code>, the message appears. If it is <code>false</code>, nothing happens.</p>
+
+    <p>Often you want two paths — one for yes, one for no. That is what <code>else</code> is for:</p>
+
+    <pre class="code-example"><code>let isRaining = false;
+
+if (isRaining) {
+  console.log("Take an umbrella!");
+} else {
+  console.log("Take sunglasses!");
+}</code></pre>
+
+    <p>You can even chain several choices together. Imagine a game that greets you differently depending on your score:</p>
+
+    <pre class="code-example"><code>let score = 75;
+
+if (score &gt;= 90) {
+  console.log("Amazing!");
+} else if (score &gt;= 60) {
+  console.log("Well done!");
+} else {
+  console.log("Keep practising!");
+}</code></pre>
+
+    <p>The computer checks each question in order, from top to bottom. The first one that is true wins. This is exactly how you decide what to wear, what to eat, and which path to take home.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>if</code> runs a piece of code only when a condition is true.</li>
+      <li><code>else</code> gives an alternative path when the condition is false.</li>
+      <li><code>else if</code> lets you chain many possible choices.</li>
+      <li>The curly braces <code>{ }</code> group one or more instructions together.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a program that prints "Good morning" if the hour is before 12.</li>
+      <li>Write a program that prints "Too hot!" if the temperature is above 30, and "Nice!" otherwise.</li>
+      <li>What happens if two conditions in a chain are both true?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Three</button>
+    <button class="nav-button" data-nav="next">Chapter Five →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 5 — ROUND AND ROUND WE GO
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-loops">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Five</p>
+    <h2>Round and Round We Go</h2>
+    <p class="chapter-tagline">How to make the computer repeat something without getting bored.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Suppose you want to count from 1 to 100. You could write a hundred lines of code, but that would be silly. Programmers are lazy in a clever way: they find shortcuts. The shortcut for repeating something is called a <strong>loop</strong>.</p>
+
+    <p>There are two main kinds. The first is the <code>while</code> loop, which keeps going as long as a question stays true:</p>
+
+    <pre class="code-example"><code>let number = 1;
+
+while (number &lt;= 5) {
+  console.log(number);
+  number = number + 1;
+}
+// → 1
+// → 2
+// → 3
+// → 4
+// → 5</code></pre>
+
+    <p>Read it like this: "While the number is less than or equal to five, print it and then add one." Each time through the loop, the number grows by one, until finally it becomes six and the question is false. The loop then stops.</p>
+
+    <p>The second kind is the <code>for</code> loop. It is a shorter way to write the same idea, with three parts bundled together:</p>
+
+    <pre class="code-example"><code>for (let number = 1; number &lt;= 5; number++) {
+  console.log(number);
+}</code></pre>
+
+    <p>The three parts are: where to start, how long to continue, and how to change after each round. That is it. It is the same logic, just tidied up.</p>
+
+    <p>Sometimes you need to stop early. The word <code>break</code> jumps out of a loop immediately. The word <code>continue</code> skips the rest of this round and starts the next one.</p>
+
+    <p>Loops are everywhere. They draw patterns, shuffle cards, count coins, and (as you will see later) run games.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A loop repeats instructions until a condition stops being true.</li>
+      <li><code>while</code> loops check the condition before each round.</li>
+      <li><code>for</code> loops group the counter, condition, and update in one line.</li>
+      <li><code>break</code> exits the loop; <code>continue</code> skips to the next round.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Print the even numbers from 2 to 20.</li>
+      <li>Print "Hello!" five times using a loop.</li>
+      <li>What happens if the condition in a <code>while</code> loop never becomes false?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Four</button>
+    <button class="nav-button" data-nav="next">Chapter Six →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 6 — MAGIC MACHINES CALLED FUNCTIONS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-machines">
+  <div class="chapter-header">
+    <p class="chapter-part">Part One · Adventurers · Chapter Six</p>
+    <h2>Magic Machines Called Functions</h2>
+    <p class="chapter-tagline">Write it once. Use it forever.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Imagine a very small machine with a funnel on top and a crank on the side. Drop a number in the funnel, turn the crank, and out comes the square of that number. Drop in 3, out comes 9. Drop in 5, out comes 25. You do not have to know how the machine works inside; you only have to know what it does.</p>
+
+    <p>That machine is called a <strong>function</strong>. A function is a little package of code you write once and call whenever you need it. Here is a function that squares a number:</p>
+
+    <pre class="code-example"><code>function square(x) {
+  return x * x;
+}
+
+console.log(square(3)); // → 9
+console.log(square(5)); // → 25</code></pre>
+
+    <p>The word <code>function</code> starts the definition. <code>square</code> is the name. <code>x</code> is the <em>parameter</em> — the slot where you drop something in. <code>return</code> is how the function hands its result back to you.</p>
+
+    <p>Functions can do anything. They can print messages, calculate totals, even call other functions. Once you have a function, you can use it a hundred times without rewriting a single line.</p>
+
+    <pre class="code-example"><code>function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Ada");   // → Hello, Ada!
+greet("Pip");   // → Hello, Pip!</code></pre>
+
+    <p>Functions can also be written more briefly, with an arrow. Do not worry about the arrow yet — just know that <code>const square = x =&gt; x * x;</code> does the same thing as the long version.</p>
+
+    <p>The magic of functions is <strong>reuse</strong>. You write once, and the whole rest of your program can use the same little machine.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A function is a reusable block of code with a name.</li>
+      <li><strong>Parameters</strong> are the slots for input; <strong>arguments</strong> are the actual values you give them.</li>
+      <li><code>return</code> sends a result back to whoever called the function.</li>
+      <li>Functions keep your programs short, clear, and easy to fix.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a function called <code>double</code> that returns twice its argument.</li>
+      <li>Write a function called <code>isEven</code> that returns <code>true</code> if its argument is an even number, and <code>false</code> otherwise.</li>
+      <li>Write a function called <code>shout</code> that prints a message in all uppercase letters.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Five</button>
+    <button class="nav-button" data-nav="next">Enter Part Two →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART TWO DIVIDER — EXPLORERS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-two" id="part-two">
+  <div class="cover-content">
+    <p class="part-number">Part Two</p>
+    <h1>Explorers</h1>
+    <p class="part-desc">You know the basics. Now it is time to roam — through lists, chests, and the wide-open playground of the web.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Seven →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 7 — LISTS OF THINGS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-lists">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Seven</p>
+    <h2>Lists of Things</h2>
+    <p class="chapter-tagline">When one value is not enough.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>So far, every name tag held one value. But what if you want to remember a whole shopping list — milk, eggs, bread, apples? You could make four separate bindings, but that gets messy fast. Programmers have a better tool: the <strong>array</strong>.</p>
+
+    <p>An array is an ordered list of values, written with square brackets and separated by commas:</p>
+
+    <pre class="code-example"><code>let shopping = ["milk", "eggs", "bread", "apples"];
+
+console.log(shopping[0]); // → milk
+console.log(shopping[2]); // → bread
+console.log(shopping.length); // → 4</code></pre>
+
+    <p>Notice three things. First, the items go inside square brackets. Second, you get an item out by putting its position in square brackets after the name. Third — and this is the one that surprises everyone — the first item is at position <strong>zero</strong>, not one. Programmers count from zero.</p>
+
+    <p>Arrays have superpowers. You can add to the end with <code>push</code>, take from the end with <code>pop</code>, and loop over every item with a <code>for...of</code> loop:</p>
+
+    <pre class="code-example"><code>let shopping = ["milk", "eggs"];
+
+shopping.push("bread");
+console.log(shopping); // → ["milk", "eggs", "bread"]
+
+for (let item of shopping) {
+  console.log("I need " + item);
+}</code></pre>
+
+    <p>Arrays are the backbone of almost every program you will ever write. They hold the scores in a game, the messages in a chat, the pixels in a picture, the rows in a spreadsheet. Get comfortable with them.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Arrays hold ordered lists of values.</li>
+      <li>Indexes start at 0. The last index is <code>length - 1</code>.</li>
+      <li><code>push</code> adds to the end; <code>pop</code> removes from the end.</li>
+      <li><code>for...of</code> visits each item in turn.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Make an array of your five favorite foods. Print the third one.</li>
+      <li>Add a sixth food to the end. Print the length of the array.</li>
+      <li>Use a <code>for...of</code> loop to print every food with a smiley face.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Two</button>
+    <button class="nav-button" data-nav="next">Chapter Eight →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 8 — TREASURE CHESTS CALLED OBJECTS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-chests">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Eight</p>
+    <h2>Treasure Chests Called Objects</h2>
+    <p class="chapter-tagline">Grouping related things together.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>An array is great when all its items are the same kind of thing. But what if you want to describe a person — name, age, favorite color, whether they can whistle? An array cannot tell you which item is which. You need a new tool: the <strong>object</strong>.</p>
+
+    <p>An object is a collection of <em>properties</em>, each with a name and a value. It looks like an array, but with names instead of positions:</p>
+
+    <pre class="code-example"><code>let ada = {
+  name: "Ada",
+  age: 12,
+  favoriteColor: "teal",
+  canWhistle: true
+};
+
+console.log(ada.name);           // → Ada
+console.log(ada.favoriteColor);  // → teal</code></pre>
+
+    <p>You reach into an object with a dot. The dot is like a tiny key that opens one drawer at a time. You can change a value too:</p>
+
+    <pre class="code-example"><code>ada.age = 13;
+console.log(ada.age); // → 13</code></pre>
+
+    <p>You can also use square brackets with a string inside, which is handy when the property name is stored in a variable:</p>
+
+    <pre class="code-example"><code>let key = "favoriteColor";
+console.log(ada[key]); // → teal</code></pre>
+
+    <p>Objects are how programmers model the world. A game character is an object with a position and a health value. A message is an object with a sender and a time. A recipe is an object with a list of ingredients and a list of steps. Once you see objects, you see them everywhere.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Objects hold named values, called properties.</li>
+      <li>Use a dot (<code>object.key</code>) or square brackets (<code>object["key"]</code>) to reach a property.</li>
+      <li>Unlike strings and numbers, objects can be changed after they are created.</li>
+      <li>Use objects whenever related pieces of information belong together.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create an object describing yourself — name, age, and one fun fact.</li>
+      <li>Print your name from the object using dot notation.</li>
+      <li>Add a new property called <code>hobby</code> to the object.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Seven</button>
+    <button class="nav-button" data-nav="next">Chapter Nine →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 9 — SUPER FUNCTIONS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-super">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Nine</p>
+    <h2>Super Functions</h2>
+    <p class="chapter-tagline">When functions can take other functions as gifts.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Here is a wild idea: in JavaScript, functions are values. You can put them in variables, pass them to other functions, and return them from functions. This is not just a curiosity — it is the single most powerful feature of the language.</p>
+
+    <p>A function that takes another function as an argument is called a <strong>higher-order function</strong>. The name sounds fancy, but the idea is simple: you are telling one machine to use another machine as part of its job.</p>
+
+    <p>The most common examples live on arrays. The <code>map</code> method transforms every item using a function you provide:</p>
+
+    <pre class="code-example"><code>let numbers = [1, 2, 3, 4, 5];
+
+let doubled = numbers.map(n =&gt; n * 2);
+console.log(doubled); // → [2, 4, 6, 8, 10]</code></pre>
+
+    <p>Read it as: "Take this array, and for every item, apply this little function." The array goes in one side, the transformed array comes out the other.</p>
+
+    <p>The <code>filter</code> method keeps only the items that pass a test:</p>
+
+    <pre class="code-example"><code>let evens = numbers.filter(n =&gt; n % 2 === 0);
+console.log(evens); // → [2, 4]</code></pre>
+
+    <p>And <code>reduce</code> folds a whole array down into a single value:</p>
+
+    <pre class="code-example"><code>let total = numbers.reduce((sum, n) =&gt; sum + n, 0);
+console.log(total); // → 15</code></pre>
+
+    <p>These three — map, filter, reduce — are the bread and butter of modern JavaScript. Once you understand them, you can write programs that read almost like English sentences.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Functions can be passed to and returned from other functions.</li>
+      <li><code>map</code> transforms every item in an array.</li>
+      <li><code>filter</code> keeps only the items that match a test.</li>
+      <li><code>reduce</code> combines every item into a single result.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Use <code>map</code> to turn <code>[1, 2, 3]</code> into <code>[10, 20, 30]</code>.</li>
+      <li>Use <code>filter</code> to keep only the words longer than three letters in <code>["cat", "elephant", "dog", "hippo"]</code>.</li>
+      <li>Use <code>reduce</code> to find the largest number in an array.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Eight</button>
+    <button class="nav-button" data-nav="next">Chapter Ten →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 10 — OOPS! BUGS AND ERRORS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-oops">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Ten</p>
+    <h2>Oops! Bugs and Errors</h2>
+    <p class="chapter-tagline">Why programs break, and what to do about it.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Nobody writes perfect code. Not you, not me, not the engineers who landed a robot on Mars. Every programmer, every day, writes mistakes. These mistakes are called <strong>bugs</strong>, and finding them is called <strong>debugging</strong>.</p>
+
+    <p>There are three kinds of bugs you will meet:</p>
+
+    <ul>
+      <li><strong>Syntax errors.</strong> The computer cannot even understand what you wrote. Maybe you forgot a quote or a closing brace. The program refuses to run.</li>
+      <li><strong>Runtime errors.</strong> The program starts, then hits a problem. Perhaps you tried to read a property from something that is not an object.</li>
+      <li><strong>Logic errors.</strong> The program runs happily but does the wrong thing. These are the sneakiest of all.</li>
+    </ul>
+
+    <p>JavaScript lets you signal a problem with the word <code>throw</code>:</p>
+
+    <pre class="code-example"><code>function divide(a, b) {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero!");
+  }
+  return a / b;
+}</code></pre>
+
+    <p>And you can catch such problems with <code>try</code> and <code>catch</code>, so your program can keep going instead of crashing:</p>
+
+    <pre class="code-example"><code>try {
+  console.log(divide(10, 0));
+} catch (error) {
+  console.log("Something went wrong: " + error.message);
+}</code></pre>
+
+    <p>When your program misbehaves, do not panic. Read the error message carefully. Add a few <code>console.log</code> lines to peek at what your values actually are. Run small pieces of code at a time. And keep in mind the most important debugging tool of all: <strong>patience</strong>.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>Bugs</strong> are mistakes in code; <strong>debugging</strong> is the art of finding them.</li>
+      <li><code>throw</code> raises an error; <code>try / catch</code> handles one gracefully.</li>
+      <li>Error messages are your friends, not your enemies — read them slowly.</li>
+      <li>Small experiments are the fastest path to understanding.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a function that throws an error if its argument is negative.</li>
+      <li>Call that function safely, catching the error and printing a friendly message.</li>
+      <li>Introduce a typo in an earlier program. What does the error message say?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Nine</button>
+    <button class="nav-button" data-nav="next">Chapter Eleven →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 11 — THE WEB PLAYGROUND
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-web">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Two · Explorers · Chapter Eleven</p>
+    <h2>The Web Playground</h2>
+    <p class="chapter-tagline">How JavaScript brings a web page to life.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every web page you visit is a little scene made of HTML — the structure, the text, the buttons, the pictures. JavaScript can step onto that scene and rearrange it. It can change text, add images, hide things, show things, respond to clicks.</p>
+
+    <p>The browser hands JavaScript a model of the whole page, called the <strong>DOM</strong> — the Document Object Model. The DOM is a tree. Every element on the page is a little node in that tree: the heading, the paragraph, the link, the image. JavaScript can find any node and change it.</p>
+
+    <pre class="code-example"><code>let heading = document.querySelector("h1");
+heading.textContent = "Hello, new world!";</code></pre>
+
+    <p>That little line finds the first heading on the page and changes its text. In one command, the visible page has changed.</p>
+
+    <p>JavaScript can also listen for things the user does. Clicks, keypresses, mouse movements — these are called <strong>events</strong>. You attach a function to an event, and the browser calls your function when the event fires:</p>
+
+    <pre class="code-example"><code>let button = document.querySelector("button");
+
+button.addEventListener("click", () =&gt; {
+  console.log("You clicked the button!");
+});</code></pre>
+
+    <p>You can build forms that respond as you type, buttons that toggle the lights, games that react to every key. This is what makes the web feel alive.</p>
+
+    <p>Everything that is possible in a browser is possible because of these two ideas: the DOM (a tree you can edit) and events (moments you can react to). Master them, and the web becomes your canvas.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>The DOM is a tree of page elements that JavaScript can inspect and change.</li>
+      <li><code>querySelector</code> finds an element by CSS selector.</li>
+      <li><code>addEventListener</code> registers a function to run when an event happens.</li>
+      <li>The browser is a live playground — change the DOM, and the page changes.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Add a button to a page and log a message when it is clicked.</li>
+      <li>Find a paragraph and change its text using <code>textContent</code>.</li>
+      <li>Make a button that, when clicked, changes the page background color.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Ten</button>
+    <button class="nav-button" data-nav="next">Enter Part Three →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART THREE DIVIDER — MASTERS
+     ============================================================ -->
+<section class="book-page cover-page part-page part-three" id="part-three">
+  <div class="cover-content">
+    <p class="part-number">Part Three</p>
+    <h1>Masters</h1>
+    <p class="part-desc">The final gate. Build your own tools, tame time, crack secret codes, and speak to the wider world.</p>
+    <div class="book-nav">
+      <button class="nav-button" data-nav="next">Begin Chapter Twelve →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 12 — BUILDING NEW THINGS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-classes">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Twelve</p>
+    <h2>Building New Things</h2>
+    <p class="chapter-tagline">How to invent your own kinds of values.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>JavaScript comes with numbers, strings, arrays, and objects. But a growing program needs its own building blocks — a <em>Vector</em> for 2D games, a <em>Robot</em> for a simulation, a <em>Player</em> for a character. You can build these yourself with <strong>classes</strong>.</p>
+
+    <p>A class is a blueprint. It describes what a kind of thing should have and what it should be able to do. Then you create <em>instances</em> of the class — actual things built from the blueprint:</p>
+
+    <pre class="code-example"><code>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(this.name + " makes a sound.");
+  }
+}
+
+let cat = new Animal("Whiskers");
+cat.speak(); // → Whiskers makes a sound.</code></pre>
+
+    <p>The <code>constructor</code> is a special method that runs when you create a new instance. The word <code>this</code> inside the class refers to the particular instance being built or used. Methods defined inside the class become shared by every instance.</p>
+
+    <p>You can build on top of an existing class with <code>extends</code>. This is called inheritance. A <code>Dog</code> class can extend <code>Animal</code> and add its own behavior while keeping what the parent already knows:</p>
+
+    <pre class="code-example"><code>class Dog extends Animal {
+  speak() {
+    console.log(this.name + " barks!");
+  }
+}
+
+let rex = new Dog("Rex");
+rex.speak(); // → Rex barks!</code></pre>
+
+    <p>Classes are how modern JavaScript programs model complicated things. A user, a comment, a game level, a shopping cart — each becomes a class with its own responsibilities.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>A <strong>class</strong> is a blueprint; an <strong>instance</strong> is an object built from it.</li>
+      <li><code>constructor</code> runs when the instance is created.</li>
+      <li><code>this</code> points to the current instance.</li>
+      <li><code>extends</code> lets a class reuse the behavior of another.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Create a <code>Book</code> class with <code>title</code> and <code>author</code>, and a method that describes the book.</li>
+      <li>Create a <code>PictureBook</code> class that extends <code>Book</code> and adds an <code>ageRange</code> property.</li>
+      <li>Create two instances and print their descriptions.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Part Three</button>
+    <button class="nav-button" data-nav="next">Chapter Thirteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 13 — WAITING GAMES
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-waiting">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Thirteen</p>
+    <h2>Waiting Games</h2>
+    <p class="chapter-tagline">How JavaScript handles things that take time.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Some things take a while. Fetching a file from the internet, reading from a disk, waiting for a user to type — these are slow compared to how fast a computer can think. If your program froze every time it waited, the whole page would lock up.</p>
+
+    <p>JavaScript solves this with <strong>asynchronous</strong> programming. Instead of waiting, your code says: "Here is what to do when the answer comes back." Meanwhile, the rest of the program keeps running.</p>
+
+    <p>In modern JavaScript, the cleanest way to write this is with <code>async</code> and <code>await</code>:</p>
+
+    <pre class="code-example"><code>async function getData() {
+  let response = await fetch("https://example.com/data.txt");
+  let text = await response.text();
+  console.log(text);
+}</code></pre>
+
+    <p>The word <code>async</code> marks a function that may pause. The word <code>await</code> says: "Wait right here until this promise is resolved, then keep going." The code reads top to bottom, just like normal code, even though it is actually pausing in the middle.</p>
+
+    <p>Behind <code>await</code> is a <strong>Promise</strong> — a little receipt that says, "A value will arrive later." A promise is either <em>pending</em>, <em>resolved</em> (success), or <em>rejected</em> (failure). You can chain them with <code>.then</code> and <code>.catch</code>, or simply <code>await</code> them inside an async function.</p>
+
+    <p>This is one of the harder ideas in JavaScript. Be patient with yourself. Once it clicks, the whole web opens up: fetching data, saving to the server, animating frames — all of it becomes possible.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>Asynchronous</strong> code starts something and continues without blocking.</li>
+      <li><strong>Promises</strong> represent values that will arrive later.</li>
+      <li><code>async</code> marks a function that can pause; <code>await</code> pauses until a promise resolves.</li>
+      <li>Slow operations (network, files) are usually asynchronous in JavaScript.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write an async function that <code>await</code>s a promise which resolves after one second.</li>
+      <li>Try to fetch a URL with <code>fetch</code> and print the status code.</li>
+      <li>What happens if you use <code>await</code> outside an async function?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Twelve</button>
+    <button class="nav-button" data-nav="next">Chapter Fourteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 14 — SECRET CODES AND PATTERNS
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-patterns">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Fourteen</p>
+    <h2>Secret Codes and Patterns</h2>
+    <p class="chapter-tagline">Finding shapes inside text.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Sometimes you need to find all the email addresses in a giant wall of text, or all the phone numbers in a document, or all the dates in a list. You could write a loop and check every character by hand, but there is a better tool: the <strong>regular expression</strong>.</p>
+
+    <p>A regular expression is a tiny language for describing patterns. You write the pattern once, and the computer finds every match. Here is one that finds any sequence of digits:</p>
+
+    <pre class="code-example"><code>let digits = /\d+/g;
+
+let text = "I have 3 cats and 12 goldfish.";
+console.log(text.match(digits)); // → ["3", "12"]</code></pre>
+
+    <p>The slashes mark the start and end of the pattern. <code>\d</code> means "any digit." The <code>+</code> means "one or more." The <code>g</code> at the end means "global — find all matches, not just the first."</p>
+
+    <p>Regular expressions can describe almost any pattern. Here is one that matches a simple email address:</p>
+
+    <pre class="code-example"><code>let email = /\S+@\S+\.\S+/g;
+
+console.log("Contact: ada@example.com or pip@school.org".match(email));
+// → ["ada@example.com", "pip@school.org"]</code></pre>
+
+    <p>Regular expressions are powerful, but they have a reputation for being cryptic. Start with the common pieces: <code>\d</code> for digits, <code>\w</code> for word characters, <code>\s</code> for spaces, <code>.</code> for any character, <code>+</code> for one-or-more, <code>*</code> for zero-or-more, and <code>|</code> for "or." Build slowly, test often, and read the pattern out loud to yourself.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li>Regular expressions describe patterns in text.</li>
+      <li>The <code>g</code> flag finds all matches, not just the first.</li>
+      <li><code>match</code> searches a string; <code>replace</code> rewrites it.</li>
+      <li>Start with small patterns. Test them on real strings before combining them.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Write a regular expression that matches all the words starting with "b" in a sentence.</li>
+      <li>Find all the numbers in a paragraph that contains dates and prices.</li>
+      <li>Use <code>replace</code> with a regular expression to turn "cat" into "dog" everywhere.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Thirteen</button>
+    <button class="nav-button" data-nav="next">Chapter Fifteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 15 — DRAWING WITH CODE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-drawing">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Fifteen</p>
+    <h2>Drawing with Code</h2>
+    <p class="chapter-tagline">When the DOM is not enough.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>You can draw with HTML and CSS — position a div here, color a box there. But when you want to draw a thousand particles per second, or a smooth curve, or a game, you need something faster. You need a <strong>canvas</strong>.</p>
+
+    <p>The <code>&lt;canvas&gt;</code> tag is a blank rectangle in a web page. JavaScript can paint on it, pixel by pixel, shape by shape, at very high speed. First you grab a drawing context, and then you use it like an artist's sketchbook:</p>
+
+    <pre class="code-example"><code>let canvas = document.querySelector("canvas");
+let cx = canvas.getContext("2d");
+
+cx.fillStyle = "tomato";
+cx.fillRect(10, 10, 100, 50);
+
+cx.strokeStyle = "steelblue";
+cx.lineWidth = 4;
+cx.strokeRect(150, 10, 100, 50);</code></pre>
+
+    <p>You can draw lines with <code>moveTo</code> and <code>lineTo</code>. You can draw circles with <code>arc</code>. You can draw text with <code>fillText</code>. You can draw pictures with <code>drawImage</code>. And you can rotate, scale, and move the whole scene with transformations.</p>
+
+    <p>For animation, you use a function called <code>requestAnimationFrame</code>, which asks the browser to call your drawing function about sixty times per second:</p>
+
+    <pre class="code-example"><code>function loop() {
+  cx.clearRect(0, 0, canvas.width, canvas.height);
+  cx.fillRect(Math.random() * 500, Math.random() * 300, 20, 20);
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);</code></pre>
+
+    <p>Canvas is how you build games, data visualizations, image editors, and generative art. The whole of the visual web lives here.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><code>&lt;canvas&gt;</code> is a paintable surface; <code>getContext("2d")</code> gives you the brushes.</li>
+      <li><code>fillRect</code>, <code>strokeRect</code>, <code>arc</code>, <code>lineTo</code> — these are your basic shapes.</li>
+      <li><code>requestAnimationFrame</code> lets you draw smooth animation.</li>
+      <li>Transformations (translate, rotate, scale) let you draw in any orientation.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Draw a house using only rectangles and triangles.</li>
+      <li>Animate a ball that bounces off the edges of the canvas.</li>
+      <li>Draw your name in big letters using <code>fillText</code>.</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fourteen</button>
+    <button class="nav-button" data-nav="next">Chapter Sixteen →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHAPTER 16 — THE INTERNET ADVENTURE
+     ============================================================ -->
+<section class="book-page chapter-page" id="ch-internet">
+  <div class="chapter-header">
+    <p class="chapter-part">Part Three · Masters · Chapter Sixteen</p>
+    <h2>The Internet Adventure</h2>
+    <p class="chapter-tagline">How your programs talk to the wider world.</p>
+  </div>
+
+  <div class="chapter-story">
+    <p>Every time you visit a website, two computers have a conversation. Your computer asks for something, and another computer — far away — answers. The rules of that conversation are called <strong>HTTP</strong>, and learning them is the key to building web apps that talk to servers.</p>
+
+    <p>An HTTP request has a <em>method</em> (usually GET or POST), a <em>URL</em>, and sometimes a <em>body</em>. The reply has a <em>status code</em> (200 means OK, 404 means not found) and its own body. In the browser, you make requests with a function called <code>fetch</code>:</p>
+
+    <pre class="code-example"><code>let response = await fetch("https://example.com/data.json");
+let data = await response.json();
+console.log(data);</code></pre>
+
+    <p>That one function can fetch data, send data, delete data — the whole vocabulary of the modern web. It returns a promise, which is why we use <code>await</code>.</p>
+
+    <p>Often, the data comes back as <strong>JSON</strong> — a text format for objects and arrays. It looks almost exactly like JavaScript literals, which makes it easy to convert back and forth with <code>JSON.parse</code> and <code>JSON.stringify</code>.</p>
+
+    <p>When you combine fetch with the DOM, you get single-page applications — sites that update smoothly without reloading. When you add Node.js on the server side, you can build the server too. The internet, in the end, is just a very large conversation between programs. And now you know the language.</p>
+
+    <p>For security, browsers guard their users carefully: a web page can only make requests to its own domain unless the server explicitly allows otherwise. Always respect those rules. They are what keep the web safe.</p>
+  </div>
+
+  <div class="chapter-ideas">
+    <h3>Key Ideas</h3>
+    <ul>
+      <li><strong>HTTP</strong> is the protocol for requesting and sending resources.</li>
+      <li><code>fetch</code> makes HTTP requests and returns a promise.</li>
+      <li><strong>JSON</strong> is the standard text format for structured data.</li>
+      <li>Browsers protect users with same-origin rules and the CORS headers.</li>
+    </ul>
+  </div>
+
+  <div class="chapter-questions">
+    <h3>Try It Yourself</h3>
+    <ol>
+      <li>Use <code>fetch</code> to load a text file and print its contents.</li>
+      <li>Fetch a JSON file and print one of the fields.</li>
+      <li>What does a 404 status mean? What about a 500?</li>
+    </ol>
+  </div>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Fifteen</button>
+    <button class="nav-button" data-nav="next">The Little Dictionary →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOSSARY
+     ============================================================ -->
+<section class="book-page chapter-page" id="glossary">
+  <div class="chapter-header">
+    <p class="chapter-part">After the Journey</p>
+    <h2>The Little Dictionary</h2>
+    <p class="chapter-tagline">Every new word you met along the way.</p>
+  </div>
+
+  <dl class="glossary-list">
+    <dt>Array</dt>
+    <dd>An ordered list of values, written with square brackets: <code>[1, 2, 3]</code>.</dd>
+
+    <dt>Asynchronous</dt>
+    <dd>Code that starts something slow and continues without waiting for it to finish.</dd>
+
+    <dt>Binding</dt>
+    <dd>A name tag you stick on a value, created with <code>let</code> or <code>const</code>.</dd>
+
+    <dt>Boolean</dt>
+    <dd>A value that is either <code>true</code> or <code>false</code>.</dd>
+
+    <dt>Bug</dt>
+    <dd>A mistake in a program that makes it do something wrong.</dd>
+
+    <dt>Call stack</dt>
+    <dd>The list of functions that are currently running, one inside the other.</dd>
+
+    <dt>Canvas</dt>
+    <dd>A rectangular surface in a web page that JavaScript can paint on.</dd>
+
+    <dt>Class</dt>
+    <dd>A blueprint for creating objects with shared structure and behavior.</dd>
+
+    <dt>Closure</dt>
+    <dd>A function that remembers the variables from where it was created.</dd>
+
+    <dt>Constant</dt>
+    <dd>A binding whose value cannot be reassigned, created with <code>const</code>.</dd>
+
+    <dt>Debugging</dt>
+    <dd>The art of finding and fixing bugs.</dd>
+
+    <dt>DOM</dt>
+    <dd>The Document Object Model — the tree of elements that makes up a web page.</dd>
+
+    <dt>Event</dt>
+    <dd>Something that happens in the browser, like a click, a keypress, or a page load.</dd>
+
+    <dt>Function</dt>
+    <dd>A reusable block of code that can take arguments and return a value.</dd>
+
+    <dt>Higher-order function</dt>
+    <dd>A function that takes another function as an argument or returns one.</dd>
+
+    <dt>JSON</dt>
+    <dd>A text format for storing and sending structured data.</dd>
+
+    <dt>Loop</dt>
+    <dd>A construct that repeats a block of code until a condition is met.</dd>
+
+    <dt>Method</dt>
+    <dd>A function that belongs to an object.</dd>
+
+    <dt>Object</dt>
+    <dd>A collection of named values, called properties.</dd>
+
+    <dt>Parameter</dt>
+    <dd>A named slot in a function definition for receiving an argument.</dd>
+
+    <dt>Promise</dt>
+    <dd>An object representing a value that will arrive in the future.</dd>
+
+    <dt>Regular expression</dt>
+    <dd>A compact language for describing patterns in text.</dd>
+
+    <dt>Scope</dt>
+    <dd>The part of a program where a binding is visible and usable.</dd>
+
+    <dt>String</dt>
+    <dd>A piece of text, written between matching quotation marks.</dd>
+
+    <dt>Variable</dt>
+    <dd>Another word for binding — a name for a value that can change.</dd>
+  </dl>
+
+  <div class="book-nav">
+    <button class="nav-button" data-nav="prev">← Chapter Sixteen</button>
+    <button class="nav-button" data-nav="next">A Note for Grown-Ups →</button>
+  </div>
+</section>
+
+<!-- ============================================================
+     BACK COVER
+     ============================================================ -->
+<section class="book-page cover-page back-cover" id="back">
+  <div class="cover-content">
+    <p class="cover-series">The Journey Ends — and Begins</p>
+    <h1>You Are a Programmer Now</h1>
+    <p class="cover-subtitle">Not because you finished a book — but because you started making things.</p>
+    <p class="closing-line">Keep building. Keep breaking. Keep learning.</p>
+
+    <div class="cover-note" style="max-width: 460px; margin-top: 30px;">
+      This little book was refactored from <em>Eloquent JavaScript</em> by Marijn Haverbeke,
+      with deep gratitude for its clear thinking and generous spirit. All mistakes
+      in the retelling are my own.
+    </div>
+
+    <div class="cover-credit">
+      Adapted &amp; illustrated by<br>
+      <a href="https://agunechemba.name.ng" target="_blank" rel="noopener">Agunechemba Ekene</a>
+    </div>
+
+    <div class="book-nav" style="border-top: none; margin-top: 24px;">
+      <button class="nav-button" data-nav="first">↺ Begin Again</button>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
