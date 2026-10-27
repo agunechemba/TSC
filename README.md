@@ -35,6 +35,7 @@ This little book was refactored from **Eloquent JavaScript** by Marijn Haverbeke
 
 This project is intended as an educational resource. The original *Eloquent JavaScript* is freely available under its own license; this adaptation is shared in the same spirit of openness. Please credit both the original author and the adapter if you reuse or remix the material.
 
+# [READ BOOK](https://example.com)
 ---
 
 *Keep building. Keep breaking. Keep learning.*
